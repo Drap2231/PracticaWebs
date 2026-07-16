@@ -24,3 +24,24 @@ lerna-debug.log*
 *.sw?
 #Variables de Entorno
 .env
+
+# Node.js
+**/node_modules/
+
+# Variables de entorno
+**/.env
+**/.env.*
+
+# Builds
+**/dist/
+**/build/
+
+# Logs
+**/*.log
+
+# IDE
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
