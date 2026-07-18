@@ -12,7 +12,7 @@ function App() {
       <Routes>
 
 
-        <Route path="/autores" element={<AutorPage estudiantes={autores} onEliminar={eliminarAutor} /> }></Route>
+        <Route path="/autores" element={<AutorPage autores={autores} onEliminar={eliminarAutor} /> }></Route>
         <Route path="/autores/nuevo" element={<AutorForm onAgregar={agregarAutor} />}></Route>
         <Route path="/autores/:id/editar" element={<AutorForm onEditar={editarAutor} onGetAutor={getAutor} />}></Route>
   
