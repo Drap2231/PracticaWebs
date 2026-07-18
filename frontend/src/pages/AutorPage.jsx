@@ -20,7 +20,7 @@ const AutorPage = (props) => {
 
     return (
         <div>
-            <h1>Estudiantes</h1>
+            <h1>Autores</h1>
             <button onClick={() => navegar("/autores/nuevo")}>+</button>
             <hr />
             {
