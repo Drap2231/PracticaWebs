@@ -9,8 +9,7 @@ export const useAutor = () => {
     //Para renderizar por primera vez
     useEffect(() => {
         
-        api.get("/api/autores", {
-        })
+        api.get("/api/autores")
             .then((res) => {
                 setAutores(res.data)
             })
@@ -22,8 +21,7 @@ export const useAutor = () => {
 
     //Para agregar nuevo Autor
     const agregarAutor = (nuevoAutor) => {
-        return api.post("/api/autores", nuevoAutor, {
-        })
+        return api.post("/api/autores", nuevoAutor)
             .then((res) => {
                 setAutores(prev => ([...prev, res.data]))
             })
@@ -36,8 +34,7 @@ export const useAutor = () => {
 
     const eliminarAutor = (id) => {
         
-        api.delete(`/api/autores/${id}`, {
-        })
+        api.delete(`/api/autores/${id}`)
 
             .then(() => {
                 console.log("Autor eliminado", id)
@@ -51,8 +48,7 @@ export const useAutor = () => {
 
     const editarAutor = (editadoAutor) => {
         const id = getId(editadoAutor)
-        return api.put(`/api/autores/${id}`, editadoAutor, {
-        })
+        return api.put(`/api/autores/${id}`, editadoAutor)
             .then(res => setAutores(prev =>
                 prev.map(e => getId(e) === id ? res.data : e)
             ))
@@ -63,8 +59,7 @@ export const useAutor = () => {
     }
 
     const getAutor = (id) => {
-        return api.get(`/api/autores/${id}`, {
-        })
+        return api.get(`/api/autores/${id}`)
             .then(res => res)
             .catch((err) => {
                 const mensaje = err.response?.data?.message ?? "Error al obtener los datos del autor";
