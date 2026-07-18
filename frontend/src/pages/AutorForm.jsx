@@ -65,17 +65,17 @@ const AutorForm = (props) => {
     return (
         <div>
             <h1>
-                {editar ? "Editar Estudiante" : "Registrar Estudiante"}
+                {editar ? "Editar Autor" : "Registrar Autor"}
             </h1>
             <button onClick={() => navegar(editar ? `/autores/${id}/detalle` : "/autores")}>←</button>
             <hr />
             <form onSubmit={handlerSubmit}>
                 <div>
-                    <label htmlFor="estNombre">Nombre:</label>
+                    <label htmlFor="autNombre">Nombre:</label>
                     <input
                         type="text"
-                        name="estNombre"
-                        id="estNombre"
+                        name="autNombre"
+                        id="autNombre"
                         value={nuevoAutor.nombre}
                         onChange={(e) => setNuevoAutor({ ...nuevoAutor, nombre: e.target.value })}
                         placeholder="Ingresa nombre" required />

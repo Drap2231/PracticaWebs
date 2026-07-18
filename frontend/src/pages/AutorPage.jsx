@@ -24,13 +24,13 @@ const AutorPage = (props) => {
             <button onClick={() => navegar("/autores/nuevo")}>+</button>
             <hr />
             {
-                listaEstudiantes.map((estudiante) => {
-                    const id = getId(estudiante)
-                    return (<div key={id}> <Estudiante nombre={estudiante.nombre} edad={estudiante.edad} url={estudiante.url} />
-                        <button onClick={() => navegar(`/estudiantes/${id}/detalle`)}>Detalle</button>
+                listaAutores.map((autor) => {
+                    const id = getId(autor)
+                    return (<div key={id}> <Autor nombre={autor.nombre}/>
+                        <button onClick={() => navegar(`/autores/${id}/detalle`)}>Detalle</button>
                         <span>   </span>
                         <button onClick={() => onEliminar(id)}
-                            {...botonDeshabilitado}>Eliminar</button>
+                            >Eliminar</button>
                         <h3>--------------------------------------------------------------------------</h3>
                     </div>
                     )

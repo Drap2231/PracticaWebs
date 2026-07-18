@@ -1,5 +1,3 @@
-//Para mostrar a un solo estudiante en toda la lista
-
 const Autor = (props) => {
     const {nombre} = props
 

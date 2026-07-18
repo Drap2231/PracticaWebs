@@ -20,7 +20,7 @@ export const useAutor = () => {
             })
     }, [])
 
-    //Para agregar nuevo estudiante
+    //Para agregar nuevo Autor
     const agregarAutor = (nuevoAutor) => {
         return api.post("/api/autores", nuevoAutor, {
         })
