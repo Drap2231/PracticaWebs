@@ -67,7 +67,7 @@ const AutorForm = (props) => {
             <h1>
                 {editar ? "Editar Autor" : "Registrar Autor"}
             </h1>
-            <button onClick={() => navegar(editar ? `/autores/${id}/detalle` : "/autores")}>←</button>
+            <button onClick={() => navegar("/autores")}>←</button>
             <hr />
             <form onSubmit={handlerSubmit}>
                 <div>

@@ -27,7 +27,7 @@ const AutorPage = (props) => {
                 listaAutores.map((autor) => {
                     const id = getId(autor)
                     return (<div key={id}> <Autor nombre={autor.nombre}/>
-                        <button onClick={() => navegar(`/autores/${id}/detalle`)}>Detalle</button>
+                        <button onClick={() => navegar(`/autores/${id}/editar`)}>Editar</button>
                         <span>   </span>
                         <button onClick={() => onEliminar(id)}
                             >Eliminar</button>
